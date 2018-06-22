@@ -1,0 +1,268 @@
+/* To override custom css */
+/*font*/
+@font-face {
+  font-family: "Icomoon";
+  src: url("../font/icomoon.eot");
+  src: url("../font/icomoon.eot?#iefix") format("embedded-opentype"),
+    url("../font/icomoon.woff") format("woff"),
+    url("../font/icomoon.ttf") format("truetype"),
+    url("../font/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UbuntuM";
+  src: url("../font/Ubuntu-M.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../font/Ubuntu-R.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UbuntuMono";
+  src: url("../font/UbuntuMono-R.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mplus";
+  src: url("../font/mplus-1m-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MplusM";
+  src: url("../font/mplus-1m-medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Icomoon";
+    src: url("../font/icomoon.svg#icomoon") format("svg");
+  }
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Icomoon;
+  font-style: normal;
+  vertical-align: middle;
+}
+.flaticon-out:before { content: "\f100"; }
+.flaticon-in:before { content: "\f101"; }
+.flaticon-verify:before { content: "\f102"; }
+.flaticon-sign:before { content: "\f103"; }
+.flaticon-address:before { content: "\f104"; }
+.flaticon-info:before { content: "\f105"; }
+.flaticon-backup:before { content: "\f106"; }
+.flaticon-console:before { content: "\f107"; }
+.flaticon-restore:before { content: "\f108"; }
+.flaticon-config:before { content: "\f109"; }
+.flaticon-home:before { content: "\f10a"; }
+.flaticon-wallet:before { content: "\f10b"; }
+.flaticon-date:before { content: "\f10c"; }
+.flaticon-answer:before { content: "\f10d"; }
+.flaticon-hint:before { content: "\f10e"; }
+.flaticon-wallets:before { content: "\f10f"; }
+.flaticon-wmcc:before { content: "\f110"; }
+.flaticon-pending:before { content: "\f111"; }
+.flaticon-wallet_out:before { content: "\f112"; }
+.flaticon-record:before { content: "\f113"; }
+.flaticon-wallet_manage:before { content: "\f114"; }
+.flaticon-swap:before { content: "\f115"; }
+.flaticon-coin_minus:before { content: "\f116"; }
+.flaticon-coin_add:before { content: "\f117"; }
+.flaticon-coin:before { content: "\f118"; }
+.flaticon-key:before { content: "\f119"; }
+.flaticon-warning:before { content: "\f11a"; }
+.flaticon-remove:before { content: "\f11b"; }
+.flaticon-continue:before { content: "\f11c"; }
+.flaticon-send:before { content: "\f11d"; }
+.flaticon-receive:before { content: "\f11e"; }
+.flaticon-qrcode:before { content: "\f11f"; }
+.flaticon-copy:before { content: "\f120"; }
+.flaticon-erase:before { content: "\f121"; }
+.flaticon-rig:before { content: "\f122"; }
+.flaticon-rig2:before { content: "\f123"; }
+.flaticon-search:before { content: "\f124"; }
+.flaticon-paste:before { content: "\f125"; }
+.flaticon-gear:before { content: "\f109"; }
+.flaticon-logout:before { content: "\f127"; }
+.flaticon-otp:before { content: "\f128"; }
+.flaticon-network:before { content: "\f129"; }
+.flaticon-id:before { content: "\f12a"; }
+.flaticon-id2:before { content: "\f12b"; }
+.flaticon-account-lock:before { content: "\f12c"; }
+.flaticon-account:before { content: "\f12d"; }
+
+.x_content{
+  font-size: 14px;
+}
+#payout_threshold .progress-bar-blank {
+  background-color: #ddd;
+}
+#payout_threshold.progress {
+  border-radius: 4px;
+  margin: 21px 20px 21px 0;
+}
+.tile_stats_count {
+  text-align: center;
+  padding: 0 15px !important;
+}
+.list li {
+  padding: 3px 0;
+}
+.tile-stats .icon{
+  right: 20px;
+  top: 30px;
+}
+.tile-stats .icon i, .tile-stats .count {
+  transition: color 1.5s ease;
+}
+.tile-stats .icon i{
+  font-size: 40px;
+  float: right;
+}
+.tile-stats:hover .icon i, .tile-stats:hover .count {
+  color: #1ABB9C;
+  opacity: 0.8;
+}
+.tile-stats.tile-middle:hover {
+  border-color: #ccc;
+  background-color: #f5f5f5;
+  cursor: default;
+}
+.tile-port {
+  display: inline-block;
+  font-family: 'Lato', Arial, sans-serif;
+}
+.tile-port .x_content{
+  width: 100%;
+}
+.tile-port .plan-inner {
+  background: #f5f5f5;
+  margin: 0 auto;
+  max-width: 100%;
+  font-size: 14px;
+  position:relative;
+}
+.tile-port .entry-title {
+  background: #53e0c5;
+  height: 140px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.tile-port .entry-title>h3 {
+  background: #1ABB9C;
+  font-size: 20px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+}
+.tile-port .entry-title .port {
+  position: absolute;
+  bottom: -25px;
+  background: #1ABB9C;
+  height: 95px;
+  width: 95px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 5px solid #fff;
+  line-height: 100px;
+  font-size: 28px;
+  font-weight: 700;
+}
+.tile-port .port span {
+  position: absolute;
+  font-size: 18px;
+  top: -25px;
+  text-align:center;
+  font-weight: 400;
+  width:100%;
+  display:block;
+}
+.tile-port .entry-content {
+  color: #323232;
+}
+.tile-port .entry-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.tile-port .entry-content li {
+  border-bottom: 1px solid #E5E5E5;
+  padding: 10px 0;
+}
+.tile-port .entry-content li:last-child {
+  border: none;
+}
+.tile-port .description {
+  margin-top:20px;
+  padding: 10px 0;
+  text-align: center;
+  background: #2A3F54;
+  color: #E7E7E7;
+}
+.tile-port .description span {
+  display:block;
+  margin: 5px 10px 10px 10px;
+  font-weight: bold;
+  text-decoration: none
+}
+.tile-port .recommended {
+    position: absolute;
+    top: -7px;
+    background: #F80;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 2;
+    padding: 2px 5px;
+    font-size: 9px;
+    border-radius: 2px;
+    right: 10px;
+    font-weight: 700;
+}
+.tile-port:nth-child(4n-2) .entry-title {
+  background: #75DDD9;
+}
+.tile-port:nth-child(4n-2) .entry-title > h3 {
+  background: #44CBC6;
+}
+.tile-port:nth-child(4n-2) .port {
+  background: #44CBC6;
+}
+.tile-port:nth-child(4n-1) .entry-title {
+  background: #4484c1;
+}
+.tile-port:nth-child(4n-1) .entry-title > h3 {
+  background: #3772aa;
+}
+.tile-port:nth-child(4n-1) .port {
+  background: #3772aa;
+}
+.tile-port:nth-child(4n) .entry-title > h3 {
+  background: #DD4B5E;
+}
+.tile-port:nth-child(4n) .entry-title {
+  background: #F75C70;
+}
+.tile-port:nth-child(4n) .port {
+  background: #DD4B5E;
+}
+#pool_activity_text {
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  text-align: center;
+}

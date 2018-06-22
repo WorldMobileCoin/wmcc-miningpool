@@ -1,0 +1,43 @@
+This is a small guideline for anyone who wants to start mining with wmccpool.com!
+
+CPU
+For CPU user, you can easly mine WMCC by press Start Mining button on WMCC Desktop Application.
+
+GPU
+For GPU miner, WMCC can be mined by a one of the mining applications below.
+Choose mining application suit to your GPU version.
+
+AMD - SGminer
+
+Download Link
+https://github.com/nicehash/sgminer/releases
+https://cryptomining-blog.com/?s=x15+sgminer
+
+Command:
+sgminer --algorithm bitblock -o stratum+tcp://[HOSTNAME]:[PORT] -u [WMCC_ADDRESS] -p [PASSWORD]
+
+Example:
+sgminer --algorithm bitblock -o stratum+tcp://wmccpool.com:5880 -u wc1qzvpmtyzptxusxf7vqvymvp8qphkjhm7uwz6jyu -p x
+
+NVDIA - CCminer
+
+Download Link
+https://cryptomining-blog.com/?s=x15+ccminer
+
+Command:
+ccminer -a x15 -o stratum+tcp://[HOSTNAME]:[PORT] -u [WMCC_ADDRESS] -p [PASSWORD]
+
+Example:
+ccminer -a x15 -o stratum+tcp://wmccpool.com:5880 -u wc1qzvpmtyzptxusxf7vqvymvp8qphkjhm7uwz6jyu -p x
+
+Baikal
+For Baikal miner, you can login web interface and setup baikal as following:
+
+URL: stratum+tcp://[HOSTNAME]:[PORT]
+Algo: x15
+User: [WMCC_ADDRESS]
+Pass: [PASSWORD]
+Extranonce: Uncheck
+
+Replace [HOSTNAME] and [PORT], refer to Connection Details section.
+You then need to change [WMCC_ADDRESS] and [PASSWORD] to reflect your own account.

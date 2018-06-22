@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="x_panel">
+      <h3>{{home::network::network}} <small>{{home::global::stats}}</small></h3>
+      <div class="row tile_count">
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-tachometer"></i> {{home::global::hashRate}}</span>
+          <div class="count" data-event='network_stats' data-name='hashRate' data-type='hashrate' data-child='rateUnit'></div>
+          <span class="count_bottom"><i class="green"><span data-name='rateUnit'></span> </i></span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-clock-o"></i> {{home::global::blockFound}}</span>
+          <div class="count" data-event='network_stats' data-name='blockFound' data-type='age' data-child='foundAge'></div>
+          <span class="count_bottom"><i class="green"><span data-name='foundAge'></span> </i></span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-flash"></i> {{home::network::difficulty}}</span>
+          <div class="count" data-event='network_stats' data-name='difficulty' data-type='multiply' data-child='diffMultiply'></div>
+          <span class="count_bottom"><i class="green"><span data-name='diffMultiply'></span> </i></span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-chain"></i> {{home::network::blockChain}}</span>
+          <div class="count" data-event='network_stats' data-name='height' data-type='int'></div>
+          <span class="count_bottom"><i class="green">{{home::network::height}} </i></span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-gift"></i> {{home::network::lastReward}}</span>
+          <div class="count" data-event='network_stats' data-name='rewards' data-type='float'></div>
+          <span class="count_bottom"><i class="green">{{home::network::wmcc}} </i></span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-history"></i> {{home::network::refreshIn}}</span>
+          <div class="count" data-event='update_stats' data-name='timer' data-type='time' data-child='refreshCount'></div>
+          <span class="count_bottom"><i class="green"><span data-name='refreshCount'></span> </i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<!-- fire event -->
+<!-- !!network_stats!! -->
+<!-- !!update_stats!! -->

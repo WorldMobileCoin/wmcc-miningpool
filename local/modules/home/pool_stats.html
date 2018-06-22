@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="x_panel">
+      <h3>{{home::pool::pool}} <small>{{home::global::stats}}</small></h3>
+      <div class="row tile_count">
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-tachometer"></i> {{home::global::sharesDiff1}}</span>
+          <div class="count" data-event='pool_stats' data-name='sharesReceived' data-type='sharerate' data-child='rateUnit'></div>
+          <span class="count_bottom"><i class="green"><span data-name='rateUnit'></span> </i></span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-clock-o"></i> {{home::global::blockFound}}</span>
+          <div class="count" data-event='pool_stats' data-name='blockFound' data-type='age' data-child='foundAge'></div>
+          <span class="count_bottom"><i class="green"><span data-name='foundAge'></span><!--Minutes ago--> </i></span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-group"></i> {{home::pool::connected}}</span>
+          <div class="count green" data-event='pool_stats' data-name='connected' data-type='plural::int::{{home::pool::miner}}' data-child='miners'></div>
+          <span class="count_bottom"><i class="green"><span data-name='miners'></span> </i></span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-money"></i> {{home::pool::poolFee}}</span>
+          <div class="count" data-event='pool_stats' data-name='poolFee' data-type='percent'></div>
+          <span class="count_bottom"><i class="green">{{home::pool::perBlockFound}} </i></span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-history"></i> {{home::pool::foundAverage}}</span>
+          <div class="count" data-event='pool_stats' data-name='foundAverage' data-type='time' data-child='perBlock'></div>
+          <span class="count_bottom"><i class="green"><span data-name='perBlock'></span> {{home::pool::perBlock}}</i></span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+          <span class="count_top"><i class="fa fa-cube"></i> {{home::pool::totalFound}}</span>
+          <div class="count" data-event='pool_stats' data-name='totalFound' data-type='plural::int::{{home::pool::block}}' data-child='blocks'></div>
+          <span class="count_bottom"><i class="green"><span data-name='blocks'></span> </i></span>
+        </div>
+      </div>
+      </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<!-- fire event -->
+<!-- !!pool_stats!! -->

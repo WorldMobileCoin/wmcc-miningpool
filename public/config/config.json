@@ -1,0 +1,10 @@
+{
+  "miningpool": [
+    {
+      "host": "127.0.0.1",
+      "port": 5880,
+      "api-key": "mysecret",
+      "ssl": false
+    }
+  ]
+}

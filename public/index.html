@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>{{siteTitle}}</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="build/css/extra.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md footer_fixed">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col menu_fixed">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="./" class="site_title"><i class="fa flaticon-wmcc"></i> <span>{{title::menuTitle}}</span></a>
+            </div>
+            <div class="clearfix"></div>
+            <br />
+            <!-- sidebar menu-->
+            %%menu::sidebar%%
+            <!-- /sidebar menu -->
+            <!-- footer menu-->
+            %%menu::footer%%
+            <!-- /footer menu -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <!-- user auth menu-->
+                %%menu::user%%
+                <!-- /user auth menu-->
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div id="pageContent" class="right_col" role="main">
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            %%menu::copyright%%
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- socket.io -->
+    <script src="vendors/socket.io/socket.io.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- NProgress -->
+    <script src="vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- Datatables -->
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <!-- jQuery Sparklines -->
+    <script src="vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <!-- Lang -->
+    <script src="build/js/language.js"></script>
+    <!-- Customs -->
+    <script src="build/js/customs.js"></script>
+    <!-- Template -->
+    <script src="build/js/template.js"></script>
+    <!-- Events -->
+    <script src="build/js/events.js"></script>
+  </body>
+</html>

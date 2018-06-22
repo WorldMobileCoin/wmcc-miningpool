@@ -1,0 +1,61 @@
+{
+  "web": {
+    "host": "127.0.0.1",
+    "port": 443,
+    "domain": "wmccpool.com",
+    "ssl": true,
+    "keyFileName": "key.pem",
+    "certFileName": "cert.pem",
+    "noAuth": false
+  },
+  "pool": {
+    "host": "0.0.0.0",
+    "publicHost": "127.0.0.1",
+    "password": "wmcc",
+    "rewardsAddress": null,
+    "statsInterval": 60,
+    "statsAverage": 10,
+    "fee": 1,
+    "founderReward": 1,
+    "autoAddUser": true,
+    "settings": [
+      {
+        "title": "Low Range",
+        "port": 5880,
+        "difficulty": 1,
+        "dynamic": true,
+        "maxInbound": 10000,
+        "desc": "Low range CPU/GPU/MiniBaikal",
+        "recommended": true
+      }, {
+        "title": "Mid Range",
+        "port": 5881,
+        "difficulty": 10,
+        "dynamic": true,
+        "maxInbound": 10000,
+        "desc": "Mid range CPU/GPU/Baikal"
+      }, {
+        "title": "High Range",
+        "port": 5882,
+        "difficulty": 100,
+        "dynamic": true,
+        "maxInbound": 10000,
+        "desc": "Modern High End, NiceHash, MRR, etc."
+      }, {
+        "title": "High Range Fixed",
+        "port": 5883,
+        "difficulty": 100,
+        "dynamic": false,
+        "maxInbound": 10000,
+        "desc": "Modern High End, NiceHash, MRR, etc."
+      }
+    ]
+  },
+  "payment": {
+    "type": "DEFAULT",
+    "threshold": 1,
+    "maxAddress": 50,
+    "txnFeeRate": 0.001,
+    "confirmation": 3
+  }
+}

@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="tile-stats tile-middle">
+      <div class="icon"><i class="fa fa-chain"></i>
+      </div>
+      <div class="count" data-event='block_summary' data-name='height' data-type='int'></div>
+      <h3>{{payouts::summary::blockchainTip}}</h3>
+      <p>{{payouts::summary::currentBlockchainHeight}}</p>
+    </div>
+  </div>
+  <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="tile-stats tile-middle">
+      <div class="icon"><i class="fa fa-clock-o"></i>
+      </div>
+      <div class="count" data-event='block_summary' data-name='poolFound' data-type='age' data-child='foundAge'></div>
+      <h3><span data-name='foundAge'></span></h3>
+      <p>{{payouts::summary::latestFoundBlockAge}}</p>
+    </div>
+  </div>
+  <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="tile-stats tile-middle">
+      <div class="icon"><i class="fa fa-history"></i>
+      </div>
+      <div class="count" data-event='block_summary' data-name='foundAverage' data-type='time' data-child='perBlock'></div>
+      <h3><span data-name='perBlock'></span> {{home::pool::perBlock}}</h3>
+      <p>{{payouts::summary::averageTimeToFindOneBlock}}</p>
+    </div>
+  </div>
+  <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="tile-stats tile-middle">
+      <div class="icon"><i class="fa fa-cubes"></i>
+      </div>
+      <div class="count" data-event='block_summary' data-name='totalFound' data-type='plural::int::{{home::pool::block}}' data-child='blocks'></div>
+      <h3><span data-name='blocks'></span></h3>
+      <p>{{payouts::summary::totalBlockFoundbyPool}}</p>
+    </div>
+  </div>
+</div>
+<!-- fire event -->
+<!-- !!block_summary!! -->

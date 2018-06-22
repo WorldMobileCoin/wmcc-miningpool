@@ -1,0 +1,23 @@
+{
+  "name": "wmcc-miningpool",
+  "version": "1.0.0-alpha.1",
+  "release": "23 June 2018",
+  "description": "WorldMobileCoin © WMCC Public Mining Pool",
+  "repository": "git://github.com/worldmobilecoin/wmcc-miningpool.git",
+  "homepage": "https://github.com/worldmobilecoin/wmcc-miningpool",
+  "bugs": {
+    "url": "https://github.com/worldmobilecoin/wmcc-miningpool/issues"
+  },
+  "author": "ParkAlter@WorldMobileCoin <worldmobilecoin@gmail.com>",
+  "keywords": [
+    "worldmobilecoin",
+    "wmcc",
+    "wmcc-miningpool",
+    "miningpool"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "main": "./lib/wmcc-miningpool.js",
+  "license": "MIT"
+}

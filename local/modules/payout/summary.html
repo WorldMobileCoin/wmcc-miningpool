@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="tile-stats tile-middle">
+      <div class="icon"><i class="fa flaticon-receive"></i>
+      </div>
+      <div class="count" data-event='payout_summary' data-name='txn' data-type='int'>0</div>
+      <h3>Payout</h3>
+      <p>Total number of payments have been sent.</p>
+    </div>
+  </div>
+  <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="tile-stats tile-middle">
+      <div class="icon"><i class="fa flaticon-wmcc"></i>
+      </div>
+      <div class="count" data-event='payout_summary' data-name='amount' data-type='amount'>0</div>
+      <h3>Paid Amount</h3>
+      <p>Total amount have been paid to address.</p>
+    </div>
+  </div>
+  <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="tile-stats tile-middle">
+      <div class="icon"><i class="fa flaticon-pending"></i>
+      </div>
+      <div class="count" data-event='payout_summary' data-name='pending' data-type='amount'>0</div>
+      <h3>Pending amount</h3>
+      <p>Waiting for payout threshold.</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="tile-stats tile-middle">
+      <div class="icon"><i class="fa flaticon-rig"></i>
+      </div>
+      <div class="count">
+        <span data-event='payout_summary' data-name='current' data-type='sharesize' data-child='currentSize'>0</span>
+        <span data-name='currentSize' style='font-size: 60%'></span>
+      </div>
+      <h3>Current Contribution</h3>
+      <p>Current submitted share of difficulty 1.</p>
+    </div>
+  </div>
+  <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="tile-stats tile-middle">
+      <div class="icon"><i class="fa flaticon-rig"></i>
+      </div>
+      <div class="count">
+        <span data-event='payout_summary' data-name='share' data-type='sharesize' data-child='shareSize'>0</span>
+        <span data-name='shareSize' style='font-size: 60%'></span>
+      </div>
+      <h3>Total Contribution</h3>
+      <p>Total submitted share of difficulty 1.</p>
+    </div>
+  </div>
+  <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="tile-stats tile-middle">
+      <div class="count">
+        <div id="payout_threshold" class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" style="width:0.5%"></div>
+          <div class="progress-bar progress-bar-blank" role="progressbar" style="width:59.5%"></div>
+          <div class="progress-bar progress-bar-info" role="progressbar" style="width:40%">
+            <span id='payout_threshold_percent'>0</span><span style="font-size: 85%">% of</span>
+            <span data-event='payout_summary' data-name='threshold' data-type='float'>1</span>
+            <span style="font-size: 70%">WMCC</span>
+          </div>
+        </div>
+      </div>
+      <h3>Payout Threshold</h3>
+      <p>Payment will be sent after reach 100%</p>
+    </div>
+  </div>
+</div>
+<!-- add event -->
+<!-- ##payout_summary## -->

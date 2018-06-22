@@ -1,0 +1,56 @@
+<div class="" role="tabpanel" data-example-id="togglable-tabs">
+  <ul id="blockTab" class="nav nav-tabs bar_tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#tab_block_valid" role="tab" id="block-valid-tab" table-id="table_block_valid" data-type="1" data-toggle="tab" aria-expanded="true">{{blocks::status::valid}}</a>
+    </li>
+    <li role="presentation" class="">
+      <a href="#tab_block_pending" role="tab" id="block-pending-tab" table-id="table_block_pending" data-type="0" data-toggle="tab" aria-expanded="false">{{blocks::status::pending}}</a>
+    </li>
+    <li role="presentation" class="">
+      <a href="#tab_block_staled" role="tab" id="block-staled-tab" table-id="table_block_staled" data-type="2" data-toggle="tab" aria-expanded="false">{{blocks::status::staled}}</a>
+    </li>
+  </ul>
+  <div id="tabBlockContent" class="tab-content">
+    <div role="tabpanel" class="tab-pane fade active in" id="tab_block_valid" aria-labelledby="block-valid-tab">
+      <table id="table_block_valid" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>{{blocks::table::blockAge}}</th>
+            <th>{{blocks::table::blockHight}}</th>
+            <th>{{blocks::table::blockHash}}</th>
+            <th>{{blocks::table::totalDiff1Share}}</th>
+            <th>{{blocks::table::rewards}}</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="tab_block_pending" aria-labelledby="block-pending-tab">
+      <table id="table_block_pending" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>{{blocks::table::blockAge}}</th>
+            <th>{{blocks::table::blockHight}}</th>
+            <th>{{blocks::table::blockHash}}</th>
+            <th>{{blocks::table::totalDiff1Share}}</th>
+            <th>{{blocks::table::rewards}}</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="tab_block_staled" aria-labelledby="block-staled-tab">
+      <table id="table_block_staled" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>{{blocks::table::blockAge}}</th>
+            <th>{{blocks::table::blockHight}}</th>
+            <th>{{blocks::table::mergedToBlock}}</th>
+            <th>{{blocks::table::blockHash}}</th>
+            <th>{{blocks::table::totalDiff1Share}}</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- fire event -->
+<!-- !!block_list!! -->

@@ -1,0 +1,18 @@
+<div class="dashboard_graph">
+  <div class="row x_title">
+    <div class="col-md-6">
+      <h3>{{poolActivity::poolActivities}} <small>{{poolActivity::minedBlocksBy}} {{server::domain}}</small></h3>
+    </div>
+  </div>
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_content">
+      <span id="pool_activity" style="height: 160px; padding: 10px 25px;">
+        <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
+      </span>
+      <span id="pool_activity_text"></span>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<!-- fire event -->
+<!-- !!pool_activity!! -->

@@ -1,0 +1,27 @@
+<div class="x_content">  
+  <div class="plan-inner">
+    <div class="recommended" data-event='mining_port' data-id="__id__" data-name='recommended' data-type='visible'>{{miner::connectionDetail::recommended}}</div>
+    <div class="entry-title">
+      <h3 class="count" data-event='mining_port' data-id="__id__" data-name='title' data-type='string'></h3>
+      <div class="port">
+        <span>{{miner::connectionDetail::port}}</span>
+        <div class="count" data-event='mining_port' data-id="__id__" data-name='port' data-type='string'></div>
+      </div>
+    </div>
+    <div class="entry-content">
+      <ul>
+        <li>
+          {{miner::connectionDetail::initialDifficulty}}
+          <strong class="count" data-event='mining_port' data-id="__id__" data-name='difficulty' data-type='string'></strong>
+        </li>
+        <li>
+          {{miner::connectionDetail::dynamicDifficulty}}
+          <strong class="count" data-event='mining_port' data-id="__id__" data-name='dynamic' data-type='yesno'></strong>
+      </ul>
+    </div>
+    <div class="description">
+      <div class="title">{{miner::connectionDetail::description}}</div>
+      <span class="count" data-event='mining_port' data-id="__id__" data-name='desc' data-type='string'></span>
+    </div>
+  </div>
+</div>
