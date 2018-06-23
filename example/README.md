@@ -1,4 +1,3 @@
-
 # wmcc-miningpool (WorldMobileCoin)
 
 This is configuration file example for miningpool server.
