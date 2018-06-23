@@ -1,8 +1,0 @@
-<IfModule !mod_rewrite.c>
-  Deny from all
-</IfModule>
-<IfModule mod_rewrite.c>
-  RewriteEngine on
-  RewriteBase /
-  RewriteRule ^(.*?/.*?/).+$ $1
-</IfModule>

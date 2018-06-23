@@ -38,7 +38,7 @@ C:/Users/[USERNAME]/.wmcc/miningpool/cert.pem
 C:/Users/[USERNAME]/.wmcc/miningpool/key.pem
 
 ### Restart WMCC-Desktop Application
-You need to reestart or relogin WMCC-Desktop Application every time you make a change.
+You need to restart or relogin WMCC-Desktop Application every time you make a change.
 
 ## Official Website
 http://www.worldmobilecoin.com/
