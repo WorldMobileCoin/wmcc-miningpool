@@ -24,16 +24,17 @@ asar pack wmcc-miningpool C:\Users\[USERNAME]\AppData\Local\Programs\wmcc-deskto
 ```
 
 ### Configuration:
-[See configuration example](https://github.com/WorldMobileCoin/wmcc-miningpool/tree/master/example)
+[See configuration example](https://github.com/WorldMobileCoin/wmcc-miningpool/tree/master/example)  
 Put config.json into [WMCC-DESKTOP_DATAPATH]/miningpool/data directory.
 
-Windows example: C:/Users/[USERNAME]/.wmcc/miningpool/data
+Windows example:  
+C:/Users/[USERNAME]/.wmcc/miningpool/data
 
 ### Using SSL
 If SSL is enable, place your certificate file into [WMCC-DESKTOP_DATAPATH]/miningpool directory.
 
-Windows example:
-C:/Users/[USERNAME]/.wmcc/miningpool/cert.pem
+Windows example:  
+C:/Users/[USERNAME]/.wmcc/miningpool/cert.pem  
 C:/Users/[USERNAME]/.wmcc/miningpool/key.pem
 
 ### Restart WMCC-Desktop Application
