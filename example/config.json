@@ -6,7 +6,8 @@
     "ssl": true,
     "keyFileName": "key.pem",
     "certFileName": "cert.pem",
-    "noAuth": false
+    "noAuth": false,
+    "explorer": "http://wmcc.network"
   },
   "pool": {
     "host": "0.0.0.0",
@@ -56,6 +57,6 @@
     "threshold": 1,
     "maxAddress": 50,
     "txnFeeRate": 0.001,
-    "confirmation": 3
+    "confirmation": 100
   }
 }

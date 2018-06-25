@@ -1,6 +1,7 @@
 const _langs = {
   server: {
-    domain: "wmccpool.com"
+    domain: "wmccpool.com",
+    host: "stratum+tcp://wmccpool.com"
   },
   title: {
     siteTitle: "WMCC Public Pool |",
@@ -30,15 +31,15 @@ const _langs = {
         e: "E",
         z: "Z",
         y: "Y",
-        zero: '',
-        kilo: 'Thousand',
-        mega: 'Million',
-        giga: 'Billion',
-        tera: 'Trillion',
-        peta: 'Quadrillion',
-        exa: 'Quintillion',
-        zetta: 'Sextillion',
-        yotta: 'Septillion'
+        zero: "",
+        kilo: "Thousand",
+        mega: "Million",
+        giga: "Billion",
+        tera: "Trillion",
+        peta: "Quadrillion",
+        exa: "Quintillion",
+        zetta: "Sextillion",
+        yotta: "Septillion"
       },
       byte: {
         bytes: "Bytes",
@@ -138,6 +139,13 @@ const _langs = {
     announcement: {
       announcement: "Announcement",
       poolNoticeboard: "Pool Noticeboard"
+    },
+    poolConfig: {
+      poolConfiguration: "Pool Configuration",
+      fee: "Pool Fee",
+      founderReward: "Block Founder Reward",
+      threshold: "Payout Threshold",
+      confirmation: "Block Maturity Depth"
     }
   },
   poolActivity: {
@@ -169,7 +177,89 @@ const _langs = {
       initialDifficulty: "Initial Difficulty:",
       dynamicDifficulty: "Dynamic Difficulty:",
       description: "Description:",
-      recommended: "Recommended"
+      recommended: "Recommended",
+      serverHostName: "Server Hostname"
+    },
+    miningApp: {
+      miningApplication: "Mining Application",
+      cpuGpuBaikal: "CPU, GPU and Baikal",
+      guidelineToStart: "This is a small guideline for anyone who wants to start mining with wmccpool.com!",
+      cpu: {
+        title: "CPU",
+        descriptions: {
+          tag: "li",
+          array: [
+            "For CPU user, you can easly mine WMCC by press Start Mining (solo mining) button on WMCC Desktop Application.",
+            "Currently, we dont support CPU pool mining for built-in client. You can use any external CPU mining application that support X15 Algorithm."
+          ]
+        }
+      },
+      gpu: {
+        title: "GPU",
+        downloadLink: "Download Link",
+        command: "Command:",
+        example: "Example:",
+        descriptions: {
+          tag: "li",
+          array: [
+            "For GPU miner, WMCC can be mined by one of the mining applications below.",
+            "Choose mining application suit to your GPU version."
+          ]
+        },
+        amd: {
+          title: "AMD - SGminer",
+          links: {
+            tag: "li",
+            array: [
+              "[[https://github.com/nicehash/sgminer/releases]](https://github.com/nicehash/sgminer/releases)",
+              "[[https://cryptomining-blog.com/?s=x15+sgminer]](https://cryptomining-blog.com/?s=x15+sgminer)"
+            ]
+          },
+          command: "sgminer --algorithm bitblock -o [HOSTNAME]:[PORT] -u [WMCC_ADDRESS] -p [PASSWORD]",
+          example: "sgminer --algorithm bitblock -o stratum+tcp://wmccpool.com:5880 -u wc1qzvpmtyzptxusxf7vqvymvp8qphkjhm7uwz6jyu -p x"
+        },
+        nvidia: {
+          title: "NVIDIA - CCminer",
+          links: {
+            tag: "li",
+            array: [
+              "[[https://cryptomining-blog.com/?s=x15+ccminer]](https://cryptomining-blog.com/?s=x15+ccminer)",
+            ]
+          },
+          command: "ccminer -a x15 -o [HOSTNAME]:[PORT] -u [WMCC_ADDRESS] -p [PASSWORD]",
+          example: "ccminer -a x15 -o stratum+tcp://wmccpool.com:5880 -u wc1qzvpmtyzptxusxf7vqvymvp8qphkjhm7uwz6jyu -p x"
+        },
+      },
+      baikal: {
+        title: "Baikal",
+        descriptions: {
+          tag: "li",
+          array: [
+            "For Baikal miner, you can login web interface and setup baikal as following:"
+          ]
+        },
+        settings: {
+          tag: "li",
+          array: [
+            "URL: [HOSTNAME]:[PORT]",
+            "Algo: x15",
+            "User: [WMCC_ADDRESS]",
+            "Pass: [PASSWORD]",
+            "Extranonce: Uncheck"
+          ]
+        }
+      },
+      note: {
+        title: "Note",
+        descriptions: {
+          tag: "li",
+          array: [
+            "Replace [HOSTNAME] and [PORT], refer to Connection Details section.",
+            "You then need to change [WMCC_ADDRESS] and [PASSWORD] to reflect your own account.",
+            "Default password is x (lowercase)."
+          ]
+        }
+      }
     }
   },
   payments: {

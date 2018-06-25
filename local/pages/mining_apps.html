@@ -1,43 +1,81 @@
-This is a small guideline for anyone who wants to start mining with wmccpool.com!
-
-CPU
-For CPU user, you can easly mine WMCC by press Start Mining button on WMCC Desktop Application.
-
-GPU
-For GPU miner, WMCC can be mined by a one of the mining applications below.
-Choose mining application suit to your GPU version.
-
-AMD - SGminer
-
-Download Link
-https://github.com/nicehash/sgminer/releases
-https://cryptomining-blog.com/?s=x15+sgminer
-
-Command:
-sgminer --algorithm bitblock -o stratum+tcp://[HOSTNAME]:[PORT] -u [WMCC_ADDRESS] -p [PASSWORD]
-
-Example:
-sgminer --algorithm bitblock -o stratum+tcp://wmccpool.com:5880 -u wc1qzvpmtyzptxusxf7vqvymvp8qphkjhm7uwz6jyu -p x
-
-NVDIA - CCminer
-
-Download Link
-https://cryptomining-blog.com/?s=x15+ccminer
-
-Command:
-ccminer -a x15 -o stratum+tcp://[HOSTNAME]:[PORT] -u [WMCC_ADDRESS] -p [PASSWORD]
-
-Example:
-ccminer -a x15 -o stratum+tcp://wmccpool.com:5880 -u wc1qzvpmtyzptxusxf7vqvymvp8qphkjhm7uwz6jyu -p x
-
-Baikal
-For Baikal miner, you can login web interface and setup baikal as following:
-
-URL: stratum+tcp://[HOSTNAME]:[PORT]
-Algo: x15
-User: [WMCC_ADDRESS]
-Pass: [PASSWORD]
-Extranonce: Uncheck
-
-Replace [HOSTNAME] and [PORT], refer to Connection Details section.
-You then need to change [WMCC_ADDRESS] and [PASSWORD] to reflect your own account.
+<div class="page-title">
+  <div class="title_left full">
+    <h3>{{miner::miningApp::miningApplication}}</h3>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="x_panel">
+      <div class="x_title">
+        <h2>{{miner::miningApp::cpuGpuBaikal}}</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          <li class="right"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div id="mining_application" class="x_content">
+        <section class="content markdown">
+          <div class="intro">{{miner::miningApp::guidelineToStart}}</div>
+          <!-- cpu -->
+          <div class="application">
+            <h2>{{miner::miningApp::cpu::title}}</h2>
+            <section class="content list">
+              <ul class="description">{{miner::miningApp::cpu::descriptions}}</ul>
+            </section>
+          </div>
+          <!-- /cpu -->
+          <!-- gpu -->
+          <div class="application">
+            <h2>{{miner::miningApp::gpu::title}}</h2>
+            <section class="content list">
+              <ul class="description">{{miner::miningApp::gpu::descriptions}}</ul>
+            </section>
+            <!-- amd -->
+            <h3>{{miner::miningApp::gpu::amd::title}}</h3>
+            <h4>{{miner::miningApp::gpu::downloadLink}}</h4>
+            <section class="content list">
+              <ul class="link">{{miner::miningApp::gpu::amd::links}}</ul>
+            </section>
+            <h4>{{miner::miningApp::gpu::command}}</h4>
+            <div class="code-wrapper"><div class="command code">{{miner::miningApp::gpu::amd::command}}</div></div>
+            <h4>{{miner::miningApp::gpu::example}}</h4>
+            <div class="code-wrapper"><div class="example code">{{miner::miningApp::gpu::amd::example}}</div></div>
+            <!-- /amd -->
+            <!-- nvidia -->
+            <h3>{{miner::miningApp::gpu::nvidia::title}}</h3>
+            <h4>{{miner::miningApp::gpu::downloadLink}}</h4>
+            <section class="content list">
+              <ul class="link">{{miner::miningApp::gpu::nvidia::links}}</ul>
+            </section>
+            <h4>{{miner::miningApp::gpu::command}}</h4>
+            <div class="code-wrapper"><div class="command code">{{miner::miningApp::gpu::nvidia::command}}</div></div>
+            <h4>{{miner::miningApp::gpu::example}}</h4>
+            <div class="code-wrapper"><div class="example code">{{miner::miningApp::gpu::nvidia::example}}</div></div>
+            <!-- /nvidia -->
+          </div>
+          <!-- /gpu -->
+          <!-- baikal -->
+          <div class="application">
+            <h2>{{miner::miningApp::baikal::title}}</h2>
+            <section class="content list">
+              <ul class="description">{{miner::miningApp::baikal::descriptions}}</ul>
+            </section>
+            <section class="content list">
+              <ul class="setting">{{miner::miningApp::baikal::settings}}</ul>
+            </section>
+          </div>
+          <!-- /baikal -->
+          <!-- note -->
+          <div class="application">
+            <h2>{{miner::miningApp::note::title}}</h2>
+            <section class="content list">
+              <ul class="description">{{miner::miningApp::note::descriptions}}</ul>
+            </section>
+          </div>
+          <!-- /note -->
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

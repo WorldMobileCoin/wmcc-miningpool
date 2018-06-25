@@ -106,10 +106,27 @@ function WMCC_Events () {
   }
 
   this.s_mining_port = function(data, index) {
-    //setTimeout(function(){
-     // console.log(data, index)
     self.setDataEvent(data, 'mining_port', 'mining_port_'+index);
-  //}, 2000)
+  }
+
+  this.s_announce = function(data) {
+    const json = JSON.parse(data);
+
+    $('#poolAnnouncement').html('');
+    for (let i=0; i<json.length; i++) {
+      const age = self.dataType('age', json[i].date);
+      $('#poolAnnouncement').append('<li><div class="block"><div class="block_content"><h2 class="title"><a>'
+          + json[i].title + '</a></h2><div class="byline"><span>' + age.parent + ' ' + age.child + '</span>'
+          + ' by <a>' + json[i].author + '</a></div><p class="excerpt">' + wmcc_template.parse(json[i].excerpt) + '</p></div></div></li>');
+    }
+  }
+
+  this.s_pool_config = function(data) {
+    $('#poolConfiguration').html('');
+    for (let key in data) {
+      const value = self.dataType(data[key].type, data[key].value, {unit: true});
+      $('#poolConfiguration').append('<tr><td>'+_langs.home.poolConfig[key]+'</td><td>:</td><td>'+value.parent+' '+(value.child?value.child:'')+'</td></tr>');
+    }
   }
 
   /**
@@ -134,7 +151,6 @@ function WMCC_Events () {
 
   /* to run all general function */
   this.c_run_all = function() {
-    //this.c_sidebar_menu();
     this.c_toogle_slide();
   }
 
@@ -331,27 +347,20 @@ function WMCC_Events () {
       payouts.push([time.toString(), payout.hash, amount.toString(true), payout.miner]);
     };*/
     for (let i=0; i<data.payouts.length; i++) {
+      const txHash = '<a href='+data.explorer+'/tx/'+data.payouts[i].hash+' target="_blank" class="hash">'+data.payouts[i].hash+'</a>';
       const time = self.dataType('age', data.payouts[i].time);
       const amount = self.dataType('wmcoin', data.payouts[i].total, {decimal: 8});
       payouts.push([
         time.toString(),
-        data.payouts[i].hash,
+        txHash,
         amount.toString(true),
         data.payouts[i].miner
       ]);
     };
 
-/*    const header = [
-      { title: _langs.payouts.table.timeSent },
-      { title: _langs.payouts.table.transactionHash },
-      { title: _langs.payouts.table.amount },
-      { title: _langs.payouts.table.share }
-    ]*/
-
     return {
       draw: dt.draw,
       data: payouts,
-//      columns: header,
       recordsTotal: data.size,
       recordsFiltered: data.size
     }
@@ -361,11 +370,12 @@ function WMCC_Events () {
     const payouts = [];
 
     for (let i=0; i<data.payouts.length; i++) {
+      const txHash = '<a href='+data.explorer+'/tx/'+data.payouts[i].paymentID+' target="_blank" class="hash">'+data.payouts[i].paymentID+'</a>';
       const time = self.dataType('age', data.payouts[i].time);
       const amount = self.dataType('wmcoin', data.payouts[i].amount, {decimal: 8});
       payouts.push([
         time.toString(),
-        data.payouts[i].paymentID,
+        txHash,
         amount.toString(),
         data.payouts[i].value
       ]);
@@ -387,11 +397,13 @@ function WMCC_Events () {
       const reward = self.dataType('wmcoin', data.shares[i].reward, {decimal: 8});
       const share = [];
 
+      const blockHash = '<a href='+data.explorer+'/block/'+data.shares[i].block+' target="_blank" class="hash">'+data.shares[i].block+'</a>';
+
       share.push(age.toString());
       share.push(data.shares[i].height);
       if (data.shares[i].merged)
         share.push(data.shares[i].merged);
-      share.push(data.shares[i].block);
+      share.push(blockHash);
       share.push(data.shares[i].total);
       if (!data.shares[i].merged)
         share.push(reward);
@@ -595,14 +607,10 @@ function WMCC_Events () {
         break;
       case 'amount':
       case 'wmcoin': // convert wmcoin to wmcc
-        const wmcc = self.formatAmount(value, 'wmcoin', options);
-        dt.parent = wmcc.amount;
-        dt.child = wmcc.unit;
-        break;
       case 'wmcc': // convert wmcc to wmcoin
-        const wmcoin = self.formatAmount(value, 'wmcc', options);
-        dt.parent = wmcoin.amount;
-        dt.child = wmcoin.unit;
+        const amount = self.formatAmount(value, type, options);
+        dt.parent = amount.amount;
+        dt.child = amount.unit;
         break;
       default:
         dt.parent = value;
@@ -735,6 +743,10 @@ function WMCC_Events () {
 
     let mul;
     switch (unit) {
+      case 'amount':
+        mul = 1;
+        unit = 'wmcc';
+        break;
       case 'wmcc':
         mul = 1e8;
         break;
@@ -749,7 +761,10 @@ function WMCC_Events () {
     const i = Math.floor(Math.log(value*mul) / Math.log(1000));
     o.amount = parseFloat((value*mul / Math.pow(1000, i))).toFixed(d);
     o.unit = _langs.global.size.number[s[i]];
-    
+
+    if (options.unit)
+      o.unit = o.unit?o.unit+' '+unit:' '+unit;
+
     return o;
   }
 

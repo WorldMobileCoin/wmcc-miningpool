@@ -1,6 +1,6 @@
 {
   "name": "wmcc-miningpool",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "release": "23 June 2018",
   "description": "WorldMobileCoin © WMCC Public Mining Pool",
   "repository": "git://github.com/worldmobilecoin/wmcc-miningpool.git",

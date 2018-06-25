@@ -99,8 +99,48 @@
 .flaticon-account-lock:before { content: "\f12c"; }
 .flaticon-account:before { content: "\f12d"; }
 
+html , body{
+  font-family: "Ubuntu", "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+  cursor: default;
+}
+div.count {
+  font-size: 30px !important;
+  font-weight: normal !important;
+}
+.tile-middle div.count {
+  line-height: 64px;
+}
 .x_content{
   font-size: 14px;
+}
+.right_col {
+  min-height: 100vh !important;
+}
+.timeline.widget .block:hover {
+  background-color: #f5f5f5;
+}
+.timeline.widget .block:hover .title a {
+  color: #1ABB9C;
+}
+table a.hash {
+  font-family: "UbuntuMono";
+  font-size: 15px;
+  margin-left: 20px;
+}
+table a.hash:hover {
+  text-decoration: underline;
+}
+table a.hash::before {
+  position: absolute;
+  margin: 2px 0 0 -20px;
+  font-family: FontAwesome;
+  content: "\f0c1";
+}
+table[id^='table_block_'] th, table[id^='table_block_'] td,
+#table_payment th, #table_payment td,
+#table_payout th, #table_payout td
+{
+  text-align: center;
 }
 #payout_threshold .progress-bar-blank {
   background-color: #ddd;
@@ -108,6 +148,20 @@
 #payout_threshold.progress {
   border-radius: 4px;
   margin: 21px 20px 21px 0;
+}
+#poolConfiguration tr:nth-of-type(odd){
+  background-color: #f5f5f5;
+}
+#poolConfiguration td{
+  line-height: 30px;
+  vertical-align: text-top;
+  border: none;
+}
+#poolConfiguration td:nth-child(2) {
+  padding: 0;
+}
+#poolConfiguration td span{
+  line-height: 0;
 }
 .tile_stats_count {
   text-align: center;
@@ -138,7 +192,6 @@
 }
 .tile-port {
   display: inline-block;
-  font-family: 'Lato', Arial, sans-serif;
 }
 .tile-port .x_content{
   width: 100%;
@@ -265,4 +318,83 @@
   width: 100%;
   padding-top: 15px;
   text-align: center;
+}
+#mining_host {
+  margin: 10px;
+}
+#mining_host .plan-inner{
+  margin-bottom: 10px;
+  background: #f5f5f5;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+#mining_host .title{
+  background: #1ABB9C;
+  color: #e7e7e7;
+  padding: 10px;
+  text-transform: uppercase;
+}
+#mining_host .plan-inner span{
+  padding: 10px;
+  display: block;
+}
+#mining_application{
+  padding: 10px 20px;
+}
+.markdown h2, .markdown h3, .markdown h4 {
+  font-size: 22px;
+  line-height: 150%;
+  border-bottom: 1.5px solid #efefef;
+}
+.markdown h3 {
+  font-size: 18px;
+}
+.markdown h4 {
+  font-size: 16px;
+  border-bottom: 0;
+}
+.markdown .intro {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.markdown .application ul {
+  display: inline-block;
+  padding-left: 15px;
+}
+.markdown .application .code-wrapper {
+  width: 100%;
+  display: inline-block;
+  overflow-x: auto;
+  background-color: #f5f5f5;
+}
+.markdown .application .code {
+  padding: 10px 20px 10px 45px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.markdown .application .code::before {
+  font-family: FontAwesome;
+  content: "\f120";
+  display:inline-block;
+  width:25px;
+  margin-left:-25px;
+}
+.markdown .application ul.link {
+  padding-left: 5px;
+}
+.markdown .application .link li::before, .markdown .application .setting li::before {
+  font-family: FontAwesome;
+  content: "\f0c1";
+  margin-right: 10px;
+}
+.markdown .application .link li, .markdown .application .setting li {
+  list-style-type: none;
+}
+.markdown .application .setting li::before {
+  content: "\f013";
+}
+.markdown .application .link li a{
+  text-decoration: underline;
+  font-weight: normal;
 }
