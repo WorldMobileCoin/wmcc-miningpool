@@ -691,11 +691,14 @@ function WMCC_Events () {
   }
 
   this.formatHourRange = function(ts) {
+    const p = new Date((ts-3640) * 1000);
     const c = new Date(ts * 1000);
-    const p = new Date((ts-360) * 1000);
 
-    return c.getFullYear()+'/'+(c.getMonth()+1)+'/'+c.getDate()+
-      ' '+c.getHours()+':00 - '+c.getHours()+':59';
+    function toTime(time) {
+      return ('0'+time.getHours()).slice(-2)+':'+('0'+(time.getMinutes())).slice(-2);
+    }
+
+    return p.getFullYear()+'/'+(p.getMonth()+1)+'/'+p.getDate()+' '+ toTime(p)+' - '+toTime(c);
   }
 
   this.formatSize = function(b, t, r, d) {
