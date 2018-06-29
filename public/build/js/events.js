@@ -691,7 +691,7 @@ function WMCC_Events () {
   }
 
   this.formatHourRange = function(ts) {
-    const p = new Date((ts-3640) * 1000);
+    const p = new Date((ts-3540) * 1000);
     const c = new Date(ts * 1000);
 
     function toTime(time) {
