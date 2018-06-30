@@ -273,7 +273,7 @@ const _langs = {
       timeSent: "Time Sent",
       transactionHash: "Transaction Hash",
       amount: "Amount",
-      output: "Output"
+      payout: "Payout"
     }
   },
   payouts: {
