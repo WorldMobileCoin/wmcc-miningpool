@@ -761,7 +761,7 @@ function WMCC_Events () {
     }
 
 
-    const i = Math.floor(Math.log(value*mul) / Math.log(1000));
+    const i = Math.max(0, Math.floor(Math.log(value*mul) / Math.log(1000)));
     o.amount = parseFloat((value*mul / Math.pow(1000, i))).toFixed(d)+_langs.global.size.number[s[i]];
 
     if (options.unit)
