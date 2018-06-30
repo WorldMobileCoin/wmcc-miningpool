@@ -762,11 +762,11 @@ function WMCC_Events () {
 
 
     const i = Math.floor(Math.log(value*mul) / Math.log(1000));
-    o.amount = parseFloat((value*mul / Math.pow(1000, i))).toFixed(d);
-    o.unit = _langs.global.size.number[s[i]];
+    o.amount = parseFloat((value*mul / Math.pow(1000, i))).toFixed(d)+_langs.global.size.number[s[i]];
 
     if (options.unit)
-      o.unit = o.unit?o.unit+' '+unit:' '+unit;
+      o.unit = unit;
+      //o.unit = o.unit?o.unit+' '+unit:' '+unit;
 
     return o;
   }
